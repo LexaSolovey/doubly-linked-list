@@ -78,16 +78,12 @@ class LinkedList {
     }
 
     indexOf(data) {
-      let node = this._head,
-          pos = -1;
+      let node = this._head;
       for(let i = 0; i < this.length; i++){
-         if(node.data === data){
-             pos = i;
-             break;
-         }
+         if(node.data === data) return i;
          node = node.next;
       }
-        return pos;
+        return -1;
       }
 
     getNode(index) {
