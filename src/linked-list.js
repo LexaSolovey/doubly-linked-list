@@ -9,7 +9,7 @@ class LinkedList {
 
     append(data) {
       const node = new Node(data);
-      if (this.length) {
+      if (this.length > 0) {
         this._tail.next = node;
         node.prev = this._tail;
         this._tail = node;
@@ -91,12 +91,8 @@ class LinkedList {
       }
 
     getNode(index) {
-      let node = this._head,
-          count = 0;
-      while (count < index) {
-          node = node.next;
-          count++;
-      }
+      let node = this._head;
+      for(let i = 0; i < index; i++) node = node.next;
       return node;
     }
 }
