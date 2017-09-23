@@ -30,8 +30,8 @@ class LinkedList {
     }
 
     at(index) {
-        return this.getNode(index).data;
-      }
+      return this.getNode(index).data;
+    }
 
     insertAt(index, data) {
       const node = new Node(data);
